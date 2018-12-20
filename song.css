@@ -1,0 +1,141 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+a {
+  text-decoration:none;
+}
+*::before,
+*::after {
+    box-sizing:border-box;
+}
+html,
+body {
+    height:100%;
+}
+.page {
+  background:url('https://p3.music.126.net/of89TZnEFBkR3-rYYfy44w==/109951163451778546.jpg') center center no-repeat;
+  background-size:cover;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  height:100%;
+  position:relative;
+}
+.img-part {
+    position:absolute;
+    top:0;
+}
+.needle {
+  width:24vw;
+  position:absolute;
+  left:45%;
+  z-index:1;
+}
+.ring {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:18vw;
+}
+.circle {
+  width:60vw;
+  position:absolute;
+}
+.light {
+  width:60vw;
+  position:absolute;
+}
+
+.cover {
+    margin-top:11vw;
+    width:38vw;
+    border-radius:19vw;
+   
+}
+.cover.playing,
+.light.playing {
+    animation:circle 20s linear infinite;
+}
+.descript {
+    flex:1;/*若存在剩余空间则该项目会放大，可以使下面的links靠近页面底部*/
+    margin-top:320px;
+    margin-bottom:20px;
+    color:rgb(241,241,241);
+    text-align:center;
+}
+.iconbox {
+    display:flex;
+}
+.icon {
+    width:50px;
+    height:50px;
+    margin-top:-100px;
+    border:1px solid #fff;
+    border-radius:25px;
+    z-index: 1;
+    fill:#fff;
+    background-color: rgba(0,0,0,0.5)
+}
+.playing1 {
+    display:none;
+}
+
+
+.descript h1 {
+    font-size:18px;
+    line-height:2;
+}
+.descript p {
+    font-size:16px;
+    line-height:1.5；
+ 
+}
+.lyric {
+    height:65px;
+    overflow:hidden;
+    color:rgb(173,170,171)
+}
+.tail {
+    color:rgb(173,170,171);
+    font-size:14px;
+    margin-top:80px;
+    margin-bottom:20px;
+}
+a:first-child {
+    display:inline-block;
+    border:1px solid  rgb(233, 92, 84);
+    border-radius:10px;
+    width:100px;
+    color:rgb(233, 92, 84);
+    font:18px;
+    line-height: 1.5;
+    background-color: transparent;
+    letter-spacing: 10px;/*设定文本中字与字的间隔*/
+    margin-right:30px;
+}
+a:last-child {
+    display:inline-block;
+    border:1px solid  rgb(233, 92, 84);
+    border-radius:10px;
+    width:100px;
+    background-color:rgb(233, 92, 84);
+    color:rgb(241,241,241);
+    font:18px;
+    line-height: 1.5;
+    letter-spacing: 10px;
+}
+.links {
+    margin-bottom:20px;
+    text-align:center; 
+}
+@keyframes circle {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
