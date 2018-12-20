@@ -24,6 +24,23 @@ body {
   height:100%;
   position:relative;
 }
+.logo {
+    display:absolute;
+    margin-left:-250px;
+    margin-top:10px;
+    color:rgb(173,170,171);;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.logo .pic {
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background:url('./logo.gif') center center no-repeat;
+    background-size:cover;
+    margin-right:10px;
+}
 .img-part {
     position:absolute;
     top:0;
