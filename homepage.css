@@ -1,0 +1,149 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background-color:rgb(252,252,253);
+}
+ul,li {
+    list-style: none;
+}
+header {
+    background-color:rgb(212,60,51);
+    padding:2.4vh 3.5vw;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.topsvg {
+    width:38vw;
+}
+header>a {
+    color:#fff;
+    border:1px solid rgb(233,156,151);
+    background:transparent;
+    padding:5px 10px;
+    border-radius:16px;
+    font-size: 15px;
+}
+nav {
+    font-size:15px;
+    background-color: #fff;
+    border-bottom:1px solid rgb(239,239,239);
+    text-align:center;
+}
+nav>ul>li {
+    display:inline-block;
+    padding:0 33px;
+}
+.active {
+    color:rgb(212,63,54);
+    border-bottom:2px solid rgb(212,63,54);/*但是这里加border后，该元素的文字看起来会比其他元素高，可以添加伪元素，绝对定位伪元素则对该元素的位置没有影响*/
+}
+nav>ul>li>p {
+    padding:10px 2px;
+}
+
+section>.navbar>p {
+    font-size:17px;
+    border-left:2px solid rgb(212,60,51);
+    padding-left:5px;
+    line-height:1;
+}
+section .navbar {
+    padding:17px 0;
+}
+.recommend ul {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    font-size:13px;
+    line-height:2.5vh;
+    padding-bottom:10px;
+}
+.recommend ul li {
+    width:calc(33.33% - 5px);
+    padding-bottom:10px;
+}
+
+.recommend ul li p {
+    padding:3px 3px;  
+    display: -webkit-box;/*必备属性*/
+    -webkit-box-orient: vertical;/*必备属性*/
+    -webkit-line-clamp: 2;/*行数*/
+    overflow: hidden;/*不需要ellipsis即可显示省略*/
+}
+.recommend img {
+    width:122px;
+}
+.latestmusic .detail svg {
+    width:20px;
+    height:20px;
+    fill:rgb(254,125,77);
+}
+.latestmusic ul {
+    padding:5px 10px;
+}
+.latestmusic ul li {
+    border-bottom:1px solid rgb(244,244,245);
+    margin-bottom:8px;
+    position:relative;
+
+}
+.latestmusic p {
+    font-size:17px;
+}
+.latestmusic span {
+    color:rgb(136,136,136);
+    font-size:12px;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    padding-left:5px;
+}
+.latestmusic .detail {
+    display:flex;
+    align-items:center;
+    padding-bottom:8px;
+}
+.latestmusic .playbtn {
+    width:22px;
+    height:22px;
+    position:absolute;
+    right:5px;
+    top:50%;
+    transform:translateY(-50%);
+    fill:rgb(170,170,170);
+}
+footer {
+    padding-top:30px;
+    background:url('https://s3.music.126.net/m/s/img/recommand_bg_2x.png?d045fafc60e017b653f8065a87496922') center center no-repeat;
+    background-size:cover;
+    text-align:center;
+    padding-bottom:20px;
+}
+footer svg {
+    width:61.5vw;
+}
+footer .logotail {
+    text-align:center;
+}
+footer .link {
+    padding:10px;
+    margin:10px 40px 5px 40px;
+    border:1.5px solid rgb(211,58,49);
+    border-radius:20px;
+    color:rgb(211,58,49)
+}
+footer .link a {
+    color:rgb(211,58,49);
+}
+footer p {
+    font-size:12px;
+    transform:scale(0.75);
+    color:rgb(188,185,185);
+}

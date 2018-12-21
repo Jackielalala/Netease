@@ -21,7 +21,7 @@ $(function(){
         })
     })
     var audio=document.createElement('audio');
-    audio.src='https://m10.music.126.net/20181220155112/fff583f50be2902a0fdfff0bfe039c68/ymusic/3c9e/439c/d816/0f5c0962d2c3067a35bf7163bea08424.mp3';
+    audio.src='http://m10.music.126.net/20181220165259/3b94a5dbf4938be5baa9f81fc4cbffdc/ymusic/3c9e/439c/d816/0f5c0962d2c3067a35bf7163bea08424.mp3';
     audio.oncanplay=function(){
         audio.play();
         $('.light').addClass('playing');
