@@ -12,7 +12,7 @@ $.ajax(
             <svg class='sq'>
                 <use xlink:href='#icon-sq'></use>
             </svg>
-            <span>歌手-专辑</span>
+            <span>${item.singer}</span>
         </div>
     
             <svg class='playbtn'>

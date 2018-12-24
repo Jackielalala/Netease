@@ -27,8 +27,8 @@ header>a {
     border:1px solid rgb(233,156,151);
     background:transparent;
     padding:5px 10px;
-    border-radius:16px;
-    font-size: 15px;
+    border-radius:15px;
+    font-size: 16px;
 }
 nav {
     font-size:15px;
@@ -62,11 +62,11 @@ section .navbar {
     flex-wrap:wrap;
     justify-content: space-around;
     font-size:13px;
-    line-height:2.5vh;
+    line-height:15px;
     padding-bottom:10px;
 }
 .recommend ul li {
-    width:calc(33.33% - 5px);
+    width:calc(33.33% - 1vh);
     padding-bottom:10px;
 }
 
@@ -78,7 +78,7 @@ section .navbar {
     overflow: hidden;/*不需要ellipsis即可显示省略*/
 }
 .recommend img {
-    width:122px;
+    width:32.5vw;
 }
 .latestmusic a p {
     color:rgb(51,51,51);
