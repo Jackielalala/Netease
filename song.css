@@ -64,17 +64,21 @@ body {
 .light {
   width:60vw;
   position:absolute;
+  animation:circle 20s linear infinite;
+  animation-play-state: paused;
 }
 
 .cover {
     margin-top:11vw;
     width:38vw;
     border-radius:19vw;
+    animation:circle 20s linear infinite;
+    animation-play-state: paused;
    
 }
 .cover.playing,
 .light.playing {
-    animation:circle 20s linear infinite;
+    animation-play-state: running;
 }
 .descript {
     flex:1;/*若存在剩余空间则该项目会放大，可以使下面的links靠近页面底部*/
