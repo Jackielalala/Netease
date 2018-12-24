@@ -80,6 +80,9 @@ section .navbar {
 .recommend img {
     width:122px;
 }
+.latestmusic a p {
+    color:rgb(51,51,51);
+}
 .latestmusic .detail svg {
     width:20px;
     height:20px;
@@ -146,4 +149,8 @@ footer p {
     font-size:12px;
     transform:scale(0.75);
     color:rgb(188,185,185);
+}
+.latestmusic .loadingpic {
+    text-align:center;
+    margin-top:10px;
 }
