@@ -40,6 +40,7 @@ body {
     background:url('./logo.gif') center center no-repeat;
     background-size:cover;
     margin-right:10px;
+    margin-left:20px;
 }
 .img-part {
     position:absolute;
@@ -109,14 +110,16 @@ body {
     font-size:18px;
     line-height:2;
 }
-.descript p {
-    font-size:16px;
-    line-height:1.5；
- 
+.lyricbox {
+    overflow: hidden;
 }
+.lyric p {
+    font-size:16px;
+    line-height:2;
+}
+
 .lyric {
-    height:65px;
-    overflow:hidden;
+    height:70px;
     color:rgb(173,170,171)
 }
 .tail {

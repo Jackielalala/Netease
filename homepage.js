@@ -14,7 +14,6 @@ $.ajax(
             </svg>
             <span>${item.singer}</span>
         </div>
-    
             <svg class='playbtn'>
                 <use xlink:href='#icon-play1'></use>
             </svg>         
