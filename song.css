@@ -125,8 +125,8 @@ body {
 .tail {
     color:rgb(173,170,171);
     font-size:14px;
-    margin-top:80px;
-    margin-bottom:20px;
+    margin-top:20px;
+    margin-bottom:10px;
 }
 a:first-child {
     display:inline-block;
@@ -162,4 +162,23 @@ a:last-child {
     100% {
         transform:rotate(360deg);
     }
+}
+
+.more {
+    width:20px;
+    height:14px;
+    overflow:hidden;
+}
+.morepic {
+    width:20px;
+    animation:move 2s infinite linear;
+}
+@keyframes move {
+    0% {
+        transform:translateY(-45px)
+    }
+    100% {
+        transform: translateY(-60px);
+    }
+
 }

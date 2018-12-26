@@ -27,3 +27,7 @@ $.ajax(
 }).always(function(){
     console.log('ok');
 })
+
+$('nav ul li p').on('click',function(){
+    $(this).addClass('active').siblings().removeClass('active');
+})
