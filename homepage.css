@@ -9,6 +9,13 @@ a {
 body {
     background-color:rgb(252,252,253);
 }
+.page>li {
+    display:none;
+}
+.page>li.active {
+    display:block;
+}
+
 ul,li {
     list-style: none;
 }
@@ -40,7 +47,8 @@ nav>ul>li {
     display:inline-block;
     padding:0 33px;
 }
-.active {
+
+p.active {
     color:rgb(212,63,54);
     border-bottom:2px solid rgb(212,63,54);/*但是这里加border后，该元素的文字看起来会比其他元素高，可以添加伪元素，绝对定位伪元素则对该元素的位置没有影响*/
 }

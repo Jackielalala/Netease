@@ -28,6 +28,8 @@ $.ajax(
     console.log('ok');
 })
 
-$('nav ul li p').on('click',function(){
-    $(this).addClass('active').siblings().removeClass('active');
+$('nav ul li p').on('click',function(e){
+    $(this).addClass('active').parent().siblings().children().removeClass('active');
+    var index=$(this).parent().index();
+    $('.page>li').eq(index).addClass('active').siblings().removeClass('active');
 })
