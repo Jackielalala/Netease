@@ -71,11 +71,11 @@ section .navbar {
     flex-wrap:wrap;
     justify-content: space-around;
     font-size:13px;
-    line-height:15px;
+    line-height:17px;
     padding-bottom:10px;
 }
 .recommend ul li {
-    width:calc(33.33% - 1vh);
+    width:calc(33.33% - 1vw);
     padding-bottom:10px;
 }
 
@@ -131,6 +131,10 @@ section .navbar {
     transform:translateY(-50%);
     fill:rgb(170,170,170);
 }
+.latestmusic .loadingpic {
+    text-align:center;
+    margin-top:10px;
+}
 footer {
     padding-top:30px;
     background:url('https://s3.music.126.net/m/s/img/recommand_bg_2x.png?d045fafc60e017b653f8065a87496922') center center no-repeat;
@@ -159,10 +163,7 @@ footer p {
     transform:scale(0.75);
     color:rgb(188,185,185);
 }
-.latestmusic .loadingpic {
-    text-align:center;
-    margin-top:10px;
-}
+
 
 .pagetwo .pic {
     background:url('https://s3.music.126.net/m/s/img/hot_music_bg_2x.jpg?f01a252389c26bcf016816242eaa6aee') center center no-repeat;
@@ -182,4 +183,40 @@ footer p {
     top:100px;
     left:25px;
     font-size:12px;
+}
+.pagetwo .single {
+    display:flex;
+    align-items:center;
+    padding:0 10px;
+    display:relative;
+    color:rgb(51,51,51);
+
+}
+.pagetwo .single>p {
+    color:rgb(223,52,54);
+    font-size: 17px;
+}
+.pagetwo .single div {
+    flex:1;
+    margin-left:20px;
+    padding: 5px 0;
+    border-bottom:2px solid rgb(245,245,246);
+    font-size:17px;
+}
+
+
+.pagetwo .single div span {
+    color:rgb(136,136,136);
+    font-size:12px;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    padding-left:5px;
+}
+.pagetwo .single svg {
+    position:absolute;
+    right:10px;
+    fill:rgb(171,171,171);
+    width:22px;
+
 }

@@ -33,3 +33,26 @@ $('nav ul li p').on('click',function(e){
     var index=$(this).parent().index();
     $('.page>li').eq(index).addClass('active').siblings().removeClass('active');
 })
+$.ajax({
+    url:'./example.json',
+    type:'GET',
+    dataType:'json'
+}).done(function(response){
+    response.forEach(function(song){
+        var $node=$(`                <a href='./song.html' class="single">
+        <p class="rank">0${song.id}</p>
+        <div class="info">
+            <p>${song.name}</p>
+            <span>${song.singer}</span>
+        </div>
+        <svg class='playbtn'>
+            <use xlink:href='#icon-play1'></use>
+        </svg>     
+    </a>`) ;/*song.id部分的写法是由问题的，怎么在html里用函数呢*/
+    $node.appendTo('.musiclist');
+    })
+
+    $('.single').on('click',function(){
+
+    })
+})
