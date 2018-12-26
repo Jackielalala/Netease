@@ -163,3 +163,23 @@ footer p {
     text-align:center;
     margin-top:10px;
 }
+
+.pagetwo .pic {
+    background:url('https://s3.music.126.net/m/s/img/hot_music_bg_2x.jpg?f01a252389c26bcf016816242eaa6aee') center center no-repeat;
+    background-size:cover;
+    height:150px;
+    position:relative;
+}
+.pagetwo .pic img {
+    width:150px;
+    position:absolute;
+    top:25px;
+    left:15px;
+}
+.pagetwo .pic p {
+    color:rgb(231,209,204);
+    position:absolute;
+    top:100px;
+    left:25px;
+    font-size:12px;
+}
