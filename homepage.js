@@ -64,8 +64,10 @@ $('input').on('input',function(){
     if(value===''){return};
     if(timer){
         clearTimeout(timer);
+        $('.output').empty();
     };/*当0.3s内还在输入时不要显示上一个字搜索出的对应歌名 */
     timer=setTimeout(function(){
+        $('input').empty();
         var result=search(value);
         if(result!==undefined){
             $node=$('<p></p>');
