@@ -1,4 +1,4 @@
-        var data=[
+        [
             {"id":1,"name":"Everything I Need"},
             {"id":2,"name":"高明的悲剧"},
             {"id":3,"name":"西域公主"},
@@ -9,4 +9,4 @@
             {"id":8,"name":"Romeo"},
             {"id":9,"name":"梦开始的地方"},
             {"id":10,"name":"A swim in the love you give me"}
-        ];
+        ]

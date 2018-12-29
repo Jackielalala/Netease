@@ -65,36 +65,31 @@ $('input').on('input',function(){
     if(timer){
         clearTimeout(timer);
         $('.output').empty();
-    };/*当0.3s内还在输入时不要显示上一个字搜索出的对应歌名 */
+        $('.result').empty();
+    };/*当0.3s内还在输入时不要显示上一个字搜索出的对应歌名,函数节流 */
     timer=setTimeout(function(){
         $('input').empty();
-        var result=search(value);
-        if(result!==undefined){
-            $node=$('<p></p>');
-            $node.text(result.name).appendTo('.output'); 
-        }else{
-            $node.text('未搜索到结果').appendTo('.output');
-        }
-
-    },300)
-
+        $.ajax({
+            url:'./search.json',
+            type:'GET',
+            dataType:'json'
+        }).done(function(response){
+                var item=response.filter(function(item){
+                        return item.name.indexOf(value)>=0;
+                    })[0];/*这里注意是val(),不是value（）*/   
+                var $tip=$('<p></p>');
+                $tip.text('搜索'+value).appendTo('.output');
+                if(item!==undefined){
+                    var $node=$(`<a href="./song.html?id=${item.id}"><p></p></a>`);/*只有按ES6的方法`...`创建元素时${}才生效*/
+                    $node.text(item.name).appendTo('.result');
+                }else{
+                    var $node=$('<p></p>');
+                    $node.text('未搜索到结果').appendTo('.output');
+                }
+            },300)
+        })
 })
 
-function search(keywords){
-    var data=[
-        {"id":1,"name":"Everything I Need"},            
-        {"id":2,"name":"高明的悲剧"},
-        {"id":3,"name":"西域公主"},
-        {"id":4,"name":"大眠"},
-        {"id":5,"name":"陌生的刚好"},
-        {"id":6,"name":"Baby Don't Cry"},
-        {"id":7,"name":"起风了"},
-        {"id":8,"name":"Romeo"},
-        {"id":9,"name":"梦开始的地方"},
-        {"id":10,"name":"A swim in the love you give me"}
-    ];
-    return data.filter(function(item){
-    return item.name.indexOf(keywords)>=0;
-    })[0];/*这里注意是val(),不是value（）*/   
-}
+
+
 

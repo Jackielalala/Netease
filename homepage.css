@@ -257,4 +257,11 @@ footer p {
 }
 .pagethree .output {
     margin:10px 20px;
+    color:rgb(80,125,175);
+}
+.pagethree .result {
+    margin:10px 20px;
+}
+.pagethree .result a {
+    color:rgb(51,51,51);
 }
