@@ -84,7 +84,7 @@ $('input').on('input',function(){
                     $node.text(item.name).appendTo('.result');
                 }else{
                     var $node=$('<p></p>');
-                    $node.text('未搜索到结果').appendTo('.output');
+                    $node.text('未搜索到结果').appendTo('.result');
                 }
             },300)
         })

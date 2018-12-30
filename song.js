@@ -8,6 +8,7 @@ $.ajax({
         return item.id===id;/*filter这种筛选子数组的方法很好用*/
     })[0];
     $('.descript h1').text(song.name);
+    $('.cover').attr('src',song.cover);
     var audio=document.createElement('audio');
     audio.src=song.url;
     audio.oncanplay=function(){
