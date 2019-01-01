@@ -9,6 +9,7 @@ $.ajax({
     })[0];
     $('.descript h1').text(song.name);
     $('.cover').attr('src',song.cover);
+    $('.page').css('background','url('+song['backgroundImg']+') center center no-repeat');/*字符串的连接还可以多试试 */
     var audio=document.createElement('audio');
     audio.src=song.url;
     audio.oncanplay=function(){
