@@ -27,7 +27,7 @@ body {
 .logo {
     display:absolute;
     margin-left:-250px;
-    margin-top:50px;
+    margin-top:20px;
     color:rgb(173,170,171);;
     display:flex;
     justify-content: center;
