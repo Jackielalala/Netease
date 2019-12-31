@@ -67,6 +67,7 @@ body {
   position:absolute;
   animation:circle 20s linear infinite;
   animation-play-state: paused;
+
 }
 
 .cover {
@@ -90,6 +91,8 @@ body {
 }
 .iconbox {
     display:flex;
+
+  
 }
 .icon {
     width:50px;

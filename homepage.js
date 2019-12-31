@@ -35,6 +35,12 @@ $('nav ul li p').on('click',function(e){
     $('.page>li').eq(index).addClass('active').siblings().removeClass('active');
 })
 
+$('.recommend li').on('click','a',function(){
+    var index=$(this).attr('index');
+   
+    $(this).attr('href',`./recommend.html?index=${index}`);
+})
+
 /*第二个页面 */
 $.ajax({
     url:'./example.json',
@@ -66,9 +72,9 @@ $('input').on('input',function(){
         clearTimeout(timer);
         $('.output').empty();
         $('.result').empty();
-    };/*当0.3s内还在输入时不要显示上一个字搜索出的对应歌名,函数节流 */
+    };/*当0.3s内还在输入时不要显示上一个字搜索出的对应歌名,函数防抖 */
     timer=setTimeout(function(){
-        $('input').empty();
+        //$('input').empty();
         $.ajax({
             url:'./search.json',
             type:'GET',
@@ -79,7 +85,7 @@ $('input').on('input',function(){
                     })[0];/*这里注意是val(),不是value（）*/   
                 var $tip=$('<p></p>');
                 $tip.text('搜索'+value).appendTo('.output');
-                if(item!==undefined){
+                if(item){
                     var $node=$(`<a href="./song.html?id=${item.id}"><p></p></a>`);/*只有按ES6的方法`...`创建元素时${}才生效*/
                     $node.text(item.name).appendTo('.result');
                 }else{
